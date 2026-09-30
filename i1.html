@@ -1,0 +1,706 @@
+<!-- 1) NAV: add inside .nav-links after Services -->
+<!-- <li><a href="#industries">Industries</a></li> -->
+
+<!-- 2) CSS: append to style.css -->
+<style>
+    .industry-search {
+        display: block;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto 2rem;
+        padding: .85rem 1.2rem;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 255, 255, .15);
+        background: rgba(255, 255, 255, .05);
+        color: inherit;
+        font: inherit;
+        outline: none
+    }
+    
+    .industry-search:focus {
+        border-color: var(--accent, #ff6b6b)
+    }
+    
+    .industries-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem
+    }
+    
+    .industry-card {
+        display: flex;
+        flex-direction: column
+    }
+    
+    .industry-card .service-price {
+        margin-top: auto
+    }
+    
+    .industry-link {
+        display: block;
+        margin-top: .9rem;
+        color: var(--accent, #ff6b6b);
+        font-weight: 600;
+        text-decoration: none;
+        font-size: .9rem
+    }
+    
+    .industry-link:hover {
+        text-decoration: underline
+    }
+    
+    .industry-empty {
+        display: none;
+        text-align: center;
+        opacity: .7;
+        margin-top: 1.5rem
+    }
+</style>
+
+<!-- 3) HTML: paste between SERVICES and FREE OFFER sections -->
+<section class="section" id="industries">
+    <div class="section-header centered">
+        <div class="section-label">Industries</div>
+        <h2 class="section-title">Solutions for Every<br>Type of Business</h2>
+        <p class="section-sub">Whatever you run — a clinic, a coaching centre or a garment store — we have a ready-to-launch digital toolkit for it, starting at just ₹199/month.</p>
+    </div>
+    <input type="search" id="industrySearch" class="industry-search" placeholder="🔍 Search your business type...">
+    <div class="industries-grid reveal" id="industriesGrid">
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🎓</div>
+            </div>
+            <div class="service-name">Coaching Centers</div>
+            <div class="service-desc">Website, student portal, WhatsApp bot and admission tracking — run your coaching centre without the paperwork.</div>
+            <ul class="service-features">
+                <li>Professional website with courses & batches</li>
+                <li>Student portal for notes, results & schedules</li>
+                <li>WhatsApp bot for enquiries & fee reminders</li>
+                <li>Admission & enquiry management</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Coaching%20Centers%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🧑‍🏫</div>
+            </div>
+            <div class="service-name">Tutors</div>
+            <div class="service-desc">Get more students with your own website, easy class booking and automatic WhatsApp reminders.</div>
+            <ul class="service-features">
+                <li>Personal website with subjects & testimonials</li>
+                <li>Online class & demo booking</li>
+                <li>Student progress tracker</li>
+                <li>WhatsApp reminder bot for classes & fees</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Tutors%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🏫</div>
+            </div>
+            <div class="service-name">Schools</div>
+            <div class="service-desc">Digitise attendance, fees and parent queries with one simple school system.</div>
+            <ul class="service-features">
+                <li>Modern school website with notices & gallery</li>
+                <li>Daily attendance system with parent alerts</li>
+                <li>Fee management with receipts & dues</li>
+                <li>AI FAQ bot for admissions & parent queries</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Schools%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🎒</div>
+            </div>
+            <div class="service-name">Colleges</div>
+            <div class="service-desc">A modern website, event portal and student dashboard for your campus.</div>
+            <ul class="service-features">
+                <li>College website with courses & notices</li>
+                <li>Event registration portal</li>
+                <li>Student dashboard for results & attendance</li>
+                <li>Announcements & notifications</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Colleges%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🩺</div>
+            </div>
+            <div class="service-name">Clinics</div>
+            <div class="service-desc">Let patients book online and never miss a visit with automatic WhatsApp reminders.</div>
+            <ul class="service-features">
+                <li>Online appointment booking 24/7</li>
+                <li>Clinic website with doctor profiles</li>
+                <li>WhatsApp reminders for appointments</li>
+                <li>Patient visit records</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Clinics%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🦷</div>
+            </div>
+            <div class="service-name">Dentists</div>
+            <div class="service-desc">Online booking and a simple patient management system for your dental practice.</div>
+            <ul class="service-features">
+                <li>Online appointment booking</li>
+                <li>Patient records & treatment history</li>
+                <li>Follow-up & recall reminders</li>
+                <li>Professional clinic website</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Dentists%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🏥</div>
+            </div>
+            <div class="service-name">Hospitals</div>
+            <div class="service-desc">Streamline appointments and answer patient questions round the clock with AI.</div>
+            <ul class="service-features">
+                <li>Department-wise appointment system</li>
+                <li>AI support bot for common queries</li>
+                <li>Doctor availability & scheduling</li>
+                <li>Multi-staff access with roles</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Hospitals%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">💊</div>
+            </div>
+            <div class="service-name">Pharmacies</div>
+            <div class="service-desc">Keep stock under control and reach nearby customers online.</div>
+            <ul class="service-features">
+                <li>Real-time medicine stock tracking</li>
+                <li>Expiry & low-stock alerts</li>
+                <li>Supplier & purchase tracking</li>
+                <li>Website with WhatsApp ordering</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Pharmacies%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🍽️</div>
+            </div>
+            <div class="service-name">Restaurants</div>
+            <div class="service-desc">Contactless QR menus, a beautiful website and easy table reservations.</div>
+            <ul class="service-features">
+                <li>QR code digital menu</li>
+                <li>Table reservation system</li>
+                <li>Restaurant website with photos & location</li>
+                <li>WhatsApp order enquiries</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Restaurants%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">☕</div>
+            </div>
+            <div class="service-name">Cafes</div>
+            <div class="service-desc">Take online orders and keep regulars coming back with a loyalty programme.</div>
+            <ul class="service-features">
+                <li>Cafe website with menu & gallery</li>
+                <li>Online ordering via WhatsApp/UPI</li>
+                <li>Loyalty points & rewards</li>
+                <li>Offers & broadcast messages</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Cafes%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">💇</div>
+            </div>
+            <div class="service-name">Salons</div>
+            <div class="service-desc">Fill your chairs with online bookings and automatic WhatsApp follow-ups.</div>
+            <ul class="service-features">
+                <li>Online appointment booking</li>
+                <li>Service menu with prices</li>
+                <li>WhatsApp confirmations & reminders</li>
+                <li>Birthday & offer messages</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Salons%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🏋️</div>
+            </div>
+            <div class="service-name">Gyms</div>
+            <div class="service-desc">Manage memberships, renewals and attendance — and look great online.</div>
+            <ul class="service-features">
+                <li>Membership & renewal management</li>
+                <li>Payment due reminders</li>
+                <li>Attendance tracking</li>
+                <li>Gym website with plans & trainers</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Gyms%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🧘</div>
+            </div>
+            <div class="service-name">Yoga Centers</div>
+            <div class="service-desc">Class booking and a calming website for your yoga studio.</div>
+            <ul class="service-features">
+                <li>Online class & batch booking</li>
+                <li>Website with schedule & instructors</li>
+                <li>Membership & package tracking</li>
+                <li>WhatsApp class reminders</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Yoga%20Centers%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🏠</div>
+            </div>
+            <div class="service-name">Real Estate Agents</div>
+            <div class="service-desc">Capture, track and follow up every property lead in one CRM.</div>
+            <ul class="service-features">
+                <li>Lead management CRM</li>
+                <li>Property listing website</li>
+                <li>Site-visit scheduling</li>
+                <li>Automated WhatsApp follow-ups</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Real%20Estate%20Agents%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">✈️</div>
+            </div>
+            <div class="service-name">Travel Agencies</div>
+            <div class="service-desc">Sell tour packages online and manage every enquiry and booking.</div>
+            <ul class="service-features">
+                <li>Tour package booking portal</li>
+                <li>Customer CRM & enquiry tracking</li>
+                <li>Itinerary & quote sharing</li>
+                <li>WhatsApp enquiry automation</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Travel%20Agencies%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🏨</div>
+            </div>
+            <div class="service-name">Hotels</div>
+            <div class="service-desc">Direct bookings and an AI assistant that answers guests 24/7.</div>
+            <ul class="service-features">
+                <li>Booking website with room availability</li>
+                <li>AI customer support bot</li>
+                <li>Guest enquiry management</li>
+                <li>Offers & seasonal promotions</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Hotels%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">⚖️</div>
+            </div>
+            <div class="service-name">Lawyers</div>
+            <div class="service-desc">A credible online presence with easy client appointment booking.</div>
+            <ul class="service-features">
+                <li>Professional website with practice areas</li>
+                <li>Online appointment booking</li>
+                <li>Client enquiry form</li>
+                <li>Contact & location integration</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Lawyers%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🧾</div>
+            </div>
+            <div class="service-name">CA Firms</div>
+            <div class="service-desc">Share documents securely and keep every client file organised.</div>
+            <ul class="service-features">
+                <li>Secure client portal</li>
+                <li>Document upload & management</li>
+                <li>Due-date reminders for filings</li>
+                <li>Professional firm website</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20CA%20Firms%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🛡️</div>
+            </div>
+            <div class="service-name">Insurance Agents</div>
+            <div class="service-desc">Never lose a lead — track policies, renewals and follow-ups.</div>
+            <ul class="service-features">
+                <li>Lead management system</li>
+                <li>Policy renewal reminders</li>
+                <li>Client database & history</li>
+                <li>WhatsApp follow-up automation</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Insurance%20Agents%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🏪</div>
+            </div>
+            <div class="service-name">Retail Shops</div>
+            <div class="service-desc">Take your shop online and keep stock accurate across channels.</div>
+            <ul class="service-features">
+                <li>E-commerce website with cart & UPI</li>
+                <li>Inventory system with low-stock alerts</li>
+                <li>WhatsApp ordering</li>
+                <li>Sales reports</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Retail%20Shops%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">👗</div>
+            </div>
+            <div class="service-name">Garment Stores</div>
+            <div class="service-desc">Show your collection online and track sizes and stock easily.</div>
+            <ul class="service-features">
+                <li>Online store with size & colour options</li>
+                <li>Inventory management by SKU</li>
+                <li>WhatsApp catalogue sharing</li>
+                <li>Seasonal offers & broadcasts</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Garment%20Stores%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">📱</div>
+            </div>
+            <div class="service-name">Electronics Shops</div>
+            <div class="service-desc">Sell gadgets online and manage customers, warranties and repeat sales.</div>
+            <ul class="service-features">
+                <li>E-commerce website with product specs</li>
+                <li>Customer CRM with purchase history</li>
+                <li>Warranty & service reminders</li>
+                <li>UPI payments & WhatsApp ordering</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Electronics%20Shops%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🛒</div>
+            </div>
+            <div class="service-name">Grocery Stores</div>
+            <div class="service-desc">Let customers order groceries online and get them delivered.</div>
+            <ul class="service-features">
+                <li>Online ordering website</li>
+                <li>WhatsApp order confirmations</li>
+                <li>UPI QR payments</li>
+                <li>Daily stock updates</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Grocery%20Stores%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🏭</div>
+            </div>
+            <div class="service-name">Manufacturing Companies</div>
+            <div class="service-desc">ERP and inventory dashboards to keep production and stock in sync.</div>
+            <ul class="service-features">
+                <li>ERP for orders, production & billing</li>
+                <li>Inventory dashboard for raw materials & goods</li>
+                <li>Supplier & purchase tracking</li>
+                <li>Multi-user access with roles</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Manufacturing%20Companies%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🚚</div>
+            </div>
+            <div class="service-name">Distributors</div>
+            <div class="service-desc">Track stock and sales across retailers and locations with ease.</div>
+            <ul class="service-features">
+                <li>Inventory & sales tracking</li>
+                <li>Retailer-wise order history</li>
+                <li>Outstanding payment tracking</li>
+                <li>Excel/CSV reports</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Distributors%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">📍</div>
+            </div>
+            <div class="service-name">Logistics Companies</div>
+            <div class="service-desc">A live shipment tracking dashboard your customers and team will love.</div>
+            <ul class="service-features">
+                <li>Real-time shipment tracking</li>
+                <li>Status updates via WhatsApp/SMS</li>
+                <li>Driver & route management</li>
+                <li>Delivery reports</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Logistics%20Companies%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🏗️</div>
+            </div>
+            <div class="service-name">Construction Companies</div>
+            <div class="service-desc">Keep every site, task and budget on track from one dashboard.</div>
+            <ul class="service-features">
+                <li>Project management dashboard</li>
+                <li>Task & timeline tracking</li>
+                <li>Material & expense tracking</li>
+                <li>Progress reports for clients</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Construction%20Companies%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🛋️</div>
+            </div>
+            <div class="service-name">Interior Designers</div>
+            <div class="service-desc">Showcase your best work with a stunning portfolio website.</div>
+            <ul class="service-features">
+                <li>Portfolio with project galleries</li>
+                <li>Enquiry & consultation form</li>
+                <li>Mobile-responsive design</li>
+                <li>Social media integration</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Interior%20Designers%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🎉</div>
+            </div>
+            <div class="service-name">Event Management Companies</div>
+            <div class="service-desc">Take bookings and run every event from a single dashboard.</div>
+            <ul class="service-features">
+                <li>Event booking portal</li>
+                <li>Event management dashboard</li>
+                <li>Vendor & task tracking</li>
+                <li>Client enquiry automation</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Event%20Management%20Companies%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">📷</div>
+            </div>
+            <div class="service-name">Photographers</div>
+            <div class="service-desc">A beautiful portfolio and online booking for shoots.</div>
+            <ul class="service-features">
+                <li>Portfolio website with galleries</li>
+                <li>Online shoot booking</li>
+                <li>Packages & pricing page</li>
+                <li>Client enquiry via WhatsApp</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Photographers%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">💻</div>
+            </div>
+            <div class="service-name">Freelancers</div>
+            <div class="service-desc">Stand out and win clients with your own portfolio website.</div>
+            <ul class="service-features">
+                <li>Personal portfolio website</li>
+                <li>Projects & testimonials showcase</li>
+                <li>Contact & enquiry form</li>
+                <li>Custom domain & SSL</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Freelancers%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">⭐</div>
+            </div>
+            <div class="service-name">Influencers</div>
+            <div class="service-desc">Your personal brand hub and a powerful link-in-bio page.</div>
+            <ul class="service-features">
+                <li>Personal brand website</li>
+                <li>Link-in-bio page</li>
+                <li>Collaboration enquiry form</li>
+                <li>Social media integration</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Influencers%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🚀</div>
+            </div>
+            <div class="service-name">Startups</div>
+            <div class="service-desc">Launch faster with MVP development, AI chatbots and APIs.</div>
+            <ul class="service-features">
+                <li>MVP development in weeks</li>
+                <li>AI chatbot integration</li>
+                <li>Custom API development</li>
+                <li>Scalable cloud setup</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Startups%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🤝</div>
+            </div>
+            <div class="service-name">NGOs & Trusts</div>
+            <div class="service-desc">Accept donations online and manage volunteers and supporters.</div>
+            <ul class="service-features">
+                <li>Donation website with UPI payments</li>
+                <li>Supporter & donor CRM</li>
+                <li>Volunteer management system</li>
+                <li>Impact stories & updates</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20NGOs%20and%20Trusts%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">👥</div>
+            </div>
+            <div class="service-name">Recruitment Agencies</div>
+            <div class="service-desc">Track every candidate from application to placement.</div>
+            <ul class="service-features">
+                <li>Candidate Tracking System (ATS)</li>
+                <li>Job posting & application management</li>
+                <li>Interview scheduling</li>
+                <li>Client & candidate database</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Recruitment%20Agencies%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">📋</div>
+            </div>
+            <div class="service-name">HR Consultancies</div>
+            <div class="service-desc">Screen resumes with AI and manage your hiring pipeline.</div>
+            <ul class="service-features">
+                <li>AI resume screening</li>
+                <li>ATS for hiring pipelines</li>
+                <li>Shortlisting & ranking candidates</li>
+                <li>Reports for clients</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20HR%20Consultancies%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🚗</div>
+            </div>
+            <div class="service-name">Car Dealerships</div>
+            <div class="service-desc">Capture every test-drive and purchase lead in one CRM.</div>
+            <ul class="service-features">
+                <li>Lead management CRM</li>
+                <li>Test-drive booking</li>
+                <li>Inventory listing website</li>
+                <li>Follow-up reminders</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Car%20Dealerships%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🏍️</div>
+            </div>
+            <div class="service-name">Bike Dealerships</div>
+            <div class="service-desc">Manage customers, enquiries and service reminders easily.</div>
+            <ul class="service-features">
+                <li>Customer management system</li>
+                <li>Enquiry & test-ride tracking</li>
+                <li>Service due reminders</li>
+                <li>WhatsApp follow-ups</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Bike%20Dealerships%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🔧</div>
+            </div>
+            <div class="service-name">Repair Shops</div>
+            <div class="service-desc">Take service bookings and keep customers updated on repairs.</div>
+            <ul class="service-features">
+                <li>Service booking system</li>
+                <li>Job status tracking</li>
+                <li>WhatsApp repair updates</li>
+                <li>Customer history</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Repair%20Shops%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">💆</div>
+            </div>
+            <div class="service-name">Beauty Clinics</div>
+            <div class="service-desc">Appointments and client records in one simple CRM.</div>
+            <ul class="service-features">
+                <li>Appointment & CRM system</li>
+                <li>Treatment history & notes</li>
+                <li>Follow-up reminders</li>
+                <li>Website with services & offers</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Beauty%20Clinics%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+        <div class="service-card industry-card">
+            <div class="service-header">
+                <div class="service-icon">🔬</div>
+            </div>
+            <div class="service-name">Diagnostic Centers</div>
+            <div class="service-desc">Online test booking and secure report delivery for patients.</div>
+            <ul class="service-features">
+                <li>Online test booking</li>
+                <li>Patient report portal</li>
+                <li>WhatsApp report notifications</li>
+                <li>Home-collection scheduling</li>
+            </ul>
+            <div class="service-price">₹199/month</div>
+            <a class="industry-link" href="https://wa.me/918116265152?text=Hi%20Intellexa!%20I%20run%20a%20Diagnostic%20Centers%20business%20and%20want%20to%20know%20more" target="_blank">Get started on WhatsApp →</a>
+        </div>
+    </div>
+    <p class="industry-empty" id="industryEmpty">Don't see your business? <a href="#contact">Talk to us</a> — we build custom solutions too.</p>
+</section>
+
+<!-- 4) JS: append to script.js (wrap in <script> if pasting into HTML) -->
+<script>
+    (function() {
+        var s = document.getElementById('industrySearch');
+        if (!s) return;
+        var cards = document.querySelectorAll('.industry-card'),
+            empty = document.getElementById('industryEmpty');
+        s.addEventListener('input', function() {
+            var q = s.value.trim().toLowerCase(),
+                n = 0;
+            cards.forEach(function(c) {
+                var m = !q || c.textContent.toLowerCase().indexOf(q) > -1;
+                c.style.display = m ? '' : 'none';
+                if (m) n++;
+            });
+            empty.style.display = n ? 'none' : 'block';
+        });
+    })();
+</script>

@@ -1,0 +1,54 @@
+/* ===== style.css additions (append to the end) ===== */
+
+.industry-search {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 2rem;
+    padding: .85rem 1.2rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    background: rgba(255, 255, 255, .05);
+    color: inherit;
+    font: inherit;
+    outline: none
+}
+
+.industry-search:focus {
+    border-color: var(--accent, #ff6b6b)
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem
+}
+
+.industry-card {
+    display: flex;
+    flex-direction: column
+}
+
+.industry-card .service-price {
+    margin-top: auto
+}
+
+.industry-link {
+    display: block;
+    margin-top: .9rem;
+    color: var(--accent, #ff6b6b);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: .9rem
+}
+
+.industry-link:hover {
+    text-decoration: underline
+}
+
+.industry-empty {
+    display: none;
+    text-align: center;
+    opacity: .7;
+    margin-top: 1.5rem
+}
